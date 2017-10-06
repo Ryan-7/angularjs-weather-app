@@ -27,7 +27,7 @@ myApp.controller('forecastController', ['$scope', '$resource', '$http', '$filter
 
     
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast');
-    $scope.weatherResult = $scope.weatherAPI.get({ zip: $scope.city + ',us', appid: 'b14c3b8852d8ea0d0384ae35d4dd6278' }).$promise.then(function(res) {
+    $scope.weatherResult = $scope.weatherAPI.get({ zip: $scope.city + ',us', appid: 'token redacted :) ' }).$promise.then(function(res) {
         $scope.cityName = res.city.name;
         $scope.weatherList = res.list;
     });
